@@ -2,26 +2,31 @@
    AUTH PAGE — Premium Artisan Marketplace
    Palette: Cream · Warm Brown · Gold · Terracotta
 ───────────────────────────────────────────── */
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
 
 /* ── Reset / Root ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
-  --cream:      #F8F3ED;
+  --cream: #F8F3ED;
   --cream-deep: #EDE5D8;
-  --beige:      #E3D5C2;
-  --brown:      #7C3A2D;
+  --beige: #E3D5C2;
+  --brown: #7C3A2D;
   --brown-dark: #5C2A20;
-  --gold:       #C9A96E;
+  --gold: #C9A96E;
   --gold-light: #E8D5A8;
-  --text-dark:  #2C1A12;
-  --text-mid:   #6B4C3B;
-  --text-soft:  #A08070;
-  --error:      #C0392B;
-  --white:      #FFFFFF;
-  --radius:     14px;
+  --text-dark: #2C1A12;
+  --text-mid: #6B4C3B;
+  --text-soft: #A08070;
+  --error: #C0392B;
+  --white: #FFFFFF;
+  --radius: 14px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -54,8 +59,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(201,169,110,0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(124,58,45,0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(201, 169, 110, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(124, 58, 45, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -107,7 +112,7 @@
 .auth-illustration-wrap {
   width: 100%;
   max-width: 400px;
-  filter: drop-shadow(0 20px 40px rgba(92,42,32,0.12));
+  filter: drop-shadow(0 20px 40px rgba(92, 42, 32, 0.12));
   animation: floatY 6s ease-in-out infinite;
 }
 
@@ -117,8 +122,15 @@
 }
 
 @keyframes floatY {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 /* Left text */
@@ -197,8 +209,15 @@
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── Toggle Pills ── */
@@ -271,7 +290,7 @@
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.35s ease;
+    opacity 0.35s ease;
 }
 
 .auth-name-row.visible {
@@ -416,7 +435,7 @@
   position: relative;
   overflow: hidden;
   transition: background var(--transition), transform 0.15s ease,
-              box-shadow var(--transition);
+    box-shadow var(--transition);
   margin-top: 0.4rem;
 }
 
@@ -424,7 +443,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.12) 50%, transparent 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
   transform: translateX(-100%);
   transition: transform 0.55s ease;
 }
@@ -454,14 +473,16 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  border: 2.5px solid rgba(255,255,255,0.35);
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
   border-top-color: white;
   border-radius: 50%;
   animation: spin 0.75s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── Divider ── */
@@ -565,17 +586,26 @@
     animation: none;
   }
 
-  .auth-left-text h2 { font-size: 1.15rem; }
-  .auth-left-text p  { font-size: 0.875rem; }
+  .auth-left-text h2 {
+    font-size: 1.15rem;
+  }
 
-  .auth-left-dots { display: none; }
+  .auth-left-text p {
+    font-size: 0.875rem;
+  }
+
+  .auth-left-dots {
+    display: none;
+  }
 
   .auth-right {
     flex: none;
     padding: 1.5rem 1.25rem 2.5rem;
   }
 
-  .auth-right::before { display: none; }
+  .auth-right::before {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
